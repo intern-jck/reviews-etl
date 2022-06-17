@@ -10,7 +10,7 @@ const characteristicsCSV = '../../api-data/raw-data/characteristicsRaw.csv';
 const characteristicReviewsCSV = '../../api-data/raw-data/characteristicReviewsRaw.csv';
 
 // Need to add a port number?
-mongoose.connect('mongodb://etluser:pineapple@127.0.0.1:27017/reviews',
+mongoose.connect('mongodb://${user}:${pwd}@127.0.0.1:27017/reviews',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -25,4 +25,4 @@ mongoose.connect('mongodb://etluser:pineapple@127.0.0.1:27017/reviews',
 // addReviews(reviewsCSV);
 // addPhotos(photosCSV);
 // addCharacteristics(characteristicsCSV);
-updateCharacteristics(characteristicReviewsCSV);
+// updateCharacteristics(characteristicReviewsCSV);
